@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.deloitte.deloitteAssignment.model.Quote;
 
+import java.util.Optional;
+
 
 @RestController
 public class QuoteController {
@@ -19,6 +21,17 @@ public class QuoteController {
     @GetMapping("/quote")
     Iterable<Quote> read(){
         return quoteservice.findAll();
+    }
+
+    @GetMapping("/quote/{id}")
+    Optional<Quote> findById(@PathVariable Integer id) {
+        return quoteservice.findById(id);
+    }
+
+    @GetMapping("/quote/search")
+    Iterable<Quote> findByQuery(
+            @RequestParam("filmName") String filmName){
+        return quoteservice.findByFilmName(filmName);
     }
 
     @PutMapping("/quote")
