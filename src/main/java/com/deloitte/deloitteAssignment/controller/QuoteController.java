@@ -18,36 +18,31 @@ public class QuoteController {
     @Autowired
     QuoteService quoteservice;
 
-    @PostMapping("/quote")
+    @PostMapping("/quotes")
     Quote create(@RequestBody Quote quote) throws ValidationException {
         if (quote.getId() == 0 && quote.getFilmName()!= null && quote.getContent() != null)
         return quoteservice.save(quote);
         else throw new ValidationException("quotes must have content and a film name");
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(ValidationException.class)
-    ErrorMessage exceptionHandler(ValidationException e) {
-        return new ErrorMessage("400", e.getMessage());
-    }
 
-    @GetMapping("/quote")
+    @GetMapping("/quotes")
     Iterable<Quote> read(){
         return quoteservice.findAll();
     }
 
-    @GetMapping("/quote/{id}")
+    @GetMapping("/quotes/{id}")
     Optional<Quote> findById(@PathVariable Integer id) {
         return quoteservice.findById(id);
     }
 
-    @GetMapping("/quote/search")
+    @GetMapping("/quotes/search")
     Iterable<Quote> findByQuery(
             @RequestParam("filmName") String filmName){
         return quoteservice.findByFilmName(filmName);
     }
 
-    @PutMapping("/quote")
+    @PutMapping("/quotes")
     ResponseEntity<Quote> update(@RequestBody Quote quote){
         if ( quoteservice.findById(quote.getId()).isPresent())
             return new ResponseEntity(quoteservice.save(quote), HttpStatus.OK);
@@ -55,7 +50,7 @@ public class QuoteController {
             return new ResponseEntity(quote, HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping("/quote/{id}")
+    @DeleteMapping("/quotes/{id}")
     void delete(@PathVariable Integer id){
         quoteservice.deleteById(id);
     }
