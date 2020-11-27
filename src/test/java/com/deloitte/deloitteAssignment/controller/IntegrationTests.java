@@ -1,5 +1,6 @@
 package com.deloitte.deloitteAssignment.controller;
 
+import com.deloitte.deloitteAssignment.model.Quote;
 import javax.xml.bind.ValidationException;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -18,6 +19,18 @@ public class IntegrationTests {
 
     @Autowired
     QuoteController quoteController;
+
+    @Test
+    public void testCreateReadDelete() throws ValidationException {
+        Quote quote = new Quote("Film", "TestQuote");
+        Quote quoteResult = quoteController.create(quote);
+
+        Iterable<Quote> quotes = quoteController.read();
+        Assertions.assertThat(quotes).last().hasFieldOrPropertyWithValue("filmName", "Film");
+
+        quoteController.delete(quoteResult.getId());
+    }
+
 
 
     @Test(expected = ValidationException.class)
