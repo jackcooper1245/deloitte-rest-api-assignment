@@ -1,8 +1,10 @@
 package com.deloitte.deloitteAssignment.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class Quote {
@@ -10,9 +12,7 @@ public class Quote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @JsonProperty("film-name")
     private String filmName;
-    @JsonProperty("content")
     private String content;
 
     public int getId() {
@@ -37,16 +37,5 @@ public class Quote {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    @Embedded
-    Actor actor;
-
-    public Actor getActor() {
-        return actor;
-    }
-
-    public void setActor(Actor actor) {
-        this.actor = actor;
     }
 }

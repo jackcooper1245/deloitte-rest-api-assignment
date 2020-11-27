@@ -40,7 +40,7 @@ public class QuoteController {
     }
 
     @DeleteMapping("/quote/{id}")
-    void delete(@PathVariable Integer Id){
-        quoteservice.deleteById(Id);
+    void delete(@PathVariable Integer id){
+        quoteservice.deleteById(id);
     }
 }
