@@ -60,6 +60,11 @@ public class QuoteController {
         throw new ValidationException("something is wrong");
     }
 
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(ValidationException.class)
+    String exceptionHandler(ValidationException e) {
+        return e.getMessage();
+    }
 
 
 }
