@@ -4,7 +4,8 @@ import com.deloitte.deloitteAssignment.service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.deloitte.deloitteAssignment.model.Quote;
-
+import com.deloitte.deloitteAssignment.model.Actor;
+import javax.persistence.Embedded;
 import java.util.Optional;
 
 
@@ -43,4 +44,6 @@ public class QuoteController {
     void delete(@PathVariable Integer id){
         quoteservice.deleteById(id);
     }
+
+
 }
