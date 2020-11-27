@@ -19,7 +19,7 @@ public class QuoteController {
     QuoteService quoteservice;
 
     @PostMapping("/quotes")
-    Quote create(@RequestBody Quote quote) throws ValidationException {
+    public Quote create(@RequestBody Quote quote) throws ValidationException {
         if (quote.getId() == 0 && quote.getFilmName()!= null && quote.getContent() != null)
         return quoteservice.save(quote);
         else throw new ValidationException("quotes must have content and a film name");
@@ -27,7 +27,7 @@ public class QuoteController {
 
 
     @GetMapping("/quotes")
-    Iterable<Quote> read(){
+    public Iterable<Quote> read(){
         return quoteservice.findAll();
     }
 
@@ -51,9 +51,15 @@ public class QuoteController {
     }
 
     @DeleteMapping("/quotes/{id}")
-    void delete(@PathVariable Integer id){
+    public void delete(@PathVariable Integer id){
         quoteservice.deleteById(id);
     }
+
+    @GetMapping("/wrong")
+    Quote somthingIsWrong() throws ValidationException {
+        throw new ValidationException("something is wrong");
+    }
+
 
 
 }
