@@ -15,6 +15,14 @@ public class Quote {
     @JsonProperty("content")
     private String content;
 
+    public Quote() {
+    }
+
+    public Quote(String filmName, String content) {
+        this.filmName = filmName;
+        this.content = content;
+    }
+
     public int getId() {
         return id;
     }
