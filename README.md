@@ -6,7 +6,7 @@ https://www.getpostman.com/collections/c500060e243d9ce5bb1e
 
 # To Run
 
-At this stage to run the program you will need to clone the repo down into Intellij. From there you will need to create a MySQL datbase called `deloite`. You can then go ahead and import script from deloitte.sql at the top-level of this repo. Make sure you have a MySQL Server running in your local environment. 
+At this stage to run the program you will need to clone the repo down into Intellij. From there you will need to create a MySQL datbase called `deloitte`. You can then go ahead and import script from deloitte.sql at the top-level of this repo. Make sure you have a MySQL Server running in your local environment. 
 
 You can then run the REST-API by clicking the green play button in the top left of IntelliJ.
 
