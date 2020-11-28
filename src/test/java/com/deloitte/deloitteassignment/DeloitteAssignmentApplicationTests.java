@@ -1,6 +1,6 @@
-package com.deloitte.deloitteAssignment;
+package com.deloitte.deloitteassignment;
 
-import com.deloitte.deloitteAssignment.controller.QuoteController;
+import com.deloitte.deloitteassignment.controller.QuoteController;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

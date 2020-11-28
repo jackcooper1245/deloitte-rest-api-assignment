@@ -1,7 +1,7 @@
-package com.deloitte.deloitteAssignment.controller;
+package com.deloitte.deloitteassignment.controller;
 
-import com.deloitte.deloitteAssignment.model.Quote;
-import com.deloitte.deloitteAssignment.service.QuoteService;
+import com.deloitte.deloitteassignment.model.Quote;
+import com.deloitte.deloitteassignment.service.QuoteService;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;

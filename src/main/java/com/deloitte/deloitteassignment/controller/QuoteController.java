@@ -1,14 +1,12 @@
-package com.deloitte.deloitteAssignment.controller;
+package com.deloitte.deloitteassignment.controller;
 
-import com.deloitte.deloitteAssignment.service.QuoteService;
-import com.deloitte.deloitteAssignment.util.ErrorMessage;
+import com.deloitte.deloitteassignment.service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.deloitte.deloitteAssignment.model.Quote;
-import com.deloitte.deloitteAssignment.model.Actor;
-import javax.persistence.Embedded;
+import com.deloitte.deloitteassignment.model.Quote;
+
 import javax.xml.bind.ValidationException;
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.deloitte.deloitteAssignment.model;
+package com.deloitte.deloitteassignment.model;
 
 import javax.persistence.Embeddable;
 

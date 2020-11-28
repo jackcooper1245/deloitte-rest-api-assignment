@@ -1,6 +1,6 @@
-package com.deloitte.deloitteAssignment.controller;
+package com.deloitte.deloitteassignment.controller;
 
-import com.deloitte.deloitteAssignment.model.Quote;
+import com.deloitte.deloitteassignment.model.Quote;
 import javax.xml.bind.ValidationException;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -8,8 +8,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import javax.xml.bind.ValidationException;
-import org.springframework.web.client.RestTemplate;
 
 
 @RunWith(SpringRunner.class)

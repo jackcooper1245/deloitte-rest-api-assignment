@@ -1,9 +1,9 @@
-package com.deloitte.deloitteAssignment;
+package com.deloitte.deloitteassignment;
 
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-import com.deloitte.deloitteAssignment.model.Quote;
+import com.deloitte.deloitteassignment.model.Quote;
 import org.assertj.core.api.Assertions;
 
 

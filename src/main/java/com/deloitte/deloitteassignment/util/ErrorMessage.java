@@ -1,4 +1,4 @@
-package com.deloitte.deloitteAssignment.util;
+package com.deloitte.deloitteassignment.util;
 
 public class ErrorMessage {
         private String status;

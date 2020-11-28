@@ -1,6 +1,6 @@
-package com.deloitte.deloitteAssignment.controller;
+package com.deloitte.deloitteassignment.controller;
 
-import com.deloitte.deloitteAssignment.util.ErrorMessage;
+import com.deloitte.deloitteassignment.util.ErrorMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
