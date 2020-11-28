@@ -98,4 +98,8 @@ The above request will get you the below quote.
     },
     "film-name": "Anchor Man",
     "content": "Buy new suits"}
+    
+ # Component Design Diagram
+ 
+ 
 
