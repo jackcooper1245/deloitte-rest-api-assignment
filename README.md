@@ -4,6 +4,18 @@ Welcome to my CRUD REST-API for my Deloitte Assignment. Here you can access and 
 Link to Postman collection:
 https://www.getpostman.com/collections/c500060e243d9ce5bb1e
 
+# To Run
+
+At this stage to run the program you will need to clone the repo down into Intellij. From there you will need to create a MySQL datbase called `deloite`. You can then go ahead and import script from deloitte.sql at the top-level of this repo. Make sure you have a MySQL Server running in your local environment. 
+
+You can then run the REST-API by clicking the green play button in the top left of IntelliJ.
+
+Navigate to `http://localhost:8080/quotes` to begin.
+
+# To Test
+
+To run the test suite look in /src/main/test. Right click on the director named `java` and click run tests. All tests will pass if the server is running. If it isn't 1 test will fail.  
+
 
 # Example Requests:
 
