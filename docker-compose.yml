@@ -1,11 +1,11 @@
-version: '0.0.1'
+version: '3'
 
 services:
 
   myapp-mysql:
     image: jackcooper1245/mysql:latest
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=deloitte
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
