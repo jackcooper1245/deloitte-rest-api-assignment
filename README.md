@@ -10,6 +10,12 @@ Link to youtube run through:
 https://www.youtube.com/watch?v=xgHdbcgstHo&feature=youtu.be
 # To Run
 
+With Docker Compose:
+
+Run `docker-compse up`
+
+Alternatively:
+
 Run:
 ` % docker pull jackcooper1245/mysql:latest`
 ` $ docker run jackcooper1245/mysql:latest`
