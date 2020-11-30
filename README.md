@@ -28,6 +28,10 @@ Navigate to `http://localhost:8080/quotes` to begin.
 
 # To Test
 
+Run `$ ./mvnw clean test`
+
+Or if in IntelliJ
+
 To run the test suite look in /src/main/test. Right click on the director named `java` and click run tests. All tests will pass if the server is running. If it isn't 1 test will fail.  
 
 
