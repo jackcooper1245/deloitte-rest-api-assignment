@@ -17,12 +17,12 @@ Run `docker-compse up`
 Alternatively:
 
 Run:
-` % docker pull jackcooper1245/mysql:latest`
+` $ docker pull jackcooper1245/mysql:latest`
 ` $ docker run jackcooper1245/mysql:latest`
 
 This will get the database running in your local environment.
 
-Navigate to the root of this director and type: `./mvnw spring-boot:run`
+Navigate to the root of this director and type: `$ ./mvnw spring-boot:run`
 
 Navigate to `http://localhost:8080/quotes` to begin.
 
