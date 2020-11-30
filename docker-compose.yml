@@ -13,12 +13,13 @@ services:
       - 3306:3306
 
   myapp-main:
-    image: jackdeloittefinal
+    image: thisone
     restart: on-failure
     depends_on:
       - myapp-mysql
+    network_mode: host
     ports:
-      - 8080:8080
+      - 8080:80
     environment:
       - DATABASE_HOST=myapp-mysql
       - DATABASE_USER=root

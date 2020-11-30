@@ -6,7 +6,13 @@ https://www.getpostman.com/collections/c500060e243d9ce5bb1e
 
 # To Run
 
-To run in terminal navigate to the root of this director and type: `./mvnw spring-boot:run`
+Run:
+` % docker pull jackcooper1245/mysql:latest`
+` $ docker run jackcooper1245/mysql:latest`
+
+This will get the database running in your local environment.
+
+Navigate to the root of this director and type: `./mvnw spring-boot:run`
 
 Navigate to `http://localhost:8080/quotes` to begin.
 
