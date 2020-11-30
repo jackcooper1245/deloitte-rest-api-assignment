@@ -1,6 +1,7 @@
 package com.deloitte.deloitteassignment.controller;
 
 import com.deloitte.deloitteassignment.service.QuoteService;
+import com.deloitte.deloitteassignment.util.ErrorMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +21,9 @@ public class QuoteController {
     public Quote create(@RequestBody Quote quote) throws ValidationException {
         if (quote.getId() == 0 && quote.getFilmName()!= null && quote.getContent() != null)
         return quoteservice.save(quote);
-        else throw new ValidationException("quotes must have content and a film name");
+        else throw new ValidationException("quotes must have content and a filmName");
     }
+
 
 
     @GetMapping("/quotes")
@@ -56,12 +58,6 @@ public class QuoteController {
     @GetMapping("/wrong")
     Quote somthingIsWrong() throws ValidationException {
         throw new ValidationException("something is wrong");
-    }
-
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(ValidationException.class)
-    String exceptionHandler(ValidationException e) {
-        return e.getMessage();
     }
 
 

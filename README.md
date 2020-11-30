@@ -4,6 +4,10 @@ Welcome to my CRUD REST-API for my Deloitte Assignment. Here you can access and 
 Link to Postman collection:
 https://www.getpostman.com/collections/c500060e243d9ce5bb1e
 
+
+Link to youtube run through:
+
+https://www.youtube.com/watch?v=xgHdbcgstHo&feature=youtu.be
 # To Run
 
 Run:

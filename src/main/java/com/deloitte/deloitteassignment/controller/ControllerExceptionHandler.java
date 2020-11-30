@@ -14,8 +14,10 @@ public class ControllerExceptionHandler {
 
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(ValidationException.class)
+    @ExceptionHandler
     ErrorMessage exceptionHandler(ValidationException e) {
         return new ErrorMessage("400", e.getMessage());
     }
+
+
 }
